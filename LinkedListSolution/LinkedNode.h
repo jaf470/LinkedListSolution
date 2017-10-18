@@ -8,7 +8,7 @@ private:
 	LinkedNode* nextNode = nullptr;
 
 	~LinkedNode() {
-		printf("LinkedNode being destroyed");
+		printf("LinkedNode being destroyed\n");
 	}
 
 
@@ -44,12 +44,8 @@ public:
 		contents = x;
 	}
 
-	void delPrevNode() {
-		prevNode = nullptr;
-	}
-
-	void delNextNode() {
-		nextNode = nullptr;
+	void delNode() {
+		delete this;
 	}
 };
 
